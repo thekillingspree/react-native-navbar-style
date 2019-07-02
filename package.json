@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No test specified\""
   },
   "repository": {
     "type": "git",
@@ -23,12 +23,10 @@
   "licenseFilename": "LICENSE",
   "readmeFilename": "README.md",
   "peerDependencies": {
-    
     "react": "16.2.0",
     "react-native": "^0.52.0"
   },
   "devDependencies": {
-    
     "react": "16.2.0",
     "react-native": "^0.52.0"
   }
