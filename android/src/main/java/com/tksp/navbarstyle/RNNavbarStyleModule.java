@@ -37,7 +37,7 @@ public class RNNavbarStyleModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void setNavbarTheme(final boolean isLight, final Promise promise) {
+    public void setLightNavbar(final boolean isLight, final Promise promise) {
         try {
             UiThreadUtil.runOnUiThread(new Runnable() {
                 @Override
