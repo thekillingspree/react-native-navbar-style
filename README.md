@@ -29,7 +29,7 @@
       compile project(':react-native-navbar-style')
   	```
 
-##Requirements
+## Requirements
  
 Changing the NavigationBar color is only supported on Android Lollipop(API 21) and above.
 Changing the NavigationBar theme (light or dark) is supported only on Android Oreo(API 26) and above.
@@ -60,9 +60,9 @@ await NavbarStyle.setLightNavbar(false);
 ```  
 
 
-##Examples
+## Examples
 
-#Colored Navbar with Light Icons
+# Colored Navbar with Light Icons
 
 ![Purple Navbar with Light Icon](https://bit.ly/2Yuf9wK)
 
@@ -71,7 +71,7 @@ NavbarStyle.setNavbarColor('#8e44ad');
 await NavbarStyle.setLightNavbar(false);
 ```  
 
-#Light Navbar with dark icons
+# Light Navbar with dark icons
 
 ![Light Navbar with dark Icons](https://bit.ly/2Nt9tSr)
 
@@ -81,7 +81,7 @@ await NavbarStyle.setLightNavbar(true);
 ```  
 
 
-#Colored Navbar with dark icons
+# Colored Navbar with dark icons
 
 ![Colored Navbar with dark Icons](https://bit.ly/2XeClgL)
 
