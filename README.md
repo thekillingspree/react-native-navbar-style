@@ -1,4 +1,7 @@
-# react-native-navbar-style
+# React Native Navbar Style
+
+ React Native Navbar Style is a [react-native](http://facebook.github.io/react-native/) library for styling the bottom navigation bar on Android devices.
+
 
 ## Getting started
 
@@ -25,13 +28,32 @@
   	```
       compile project(':react-native-navbar-style')
   	```
-
+##Requirements
+ 
+Changing the NavigationBar color is only supported on Android Lollipop(API 21) and above.
+Changing the NavigationBar theme (light or dark) is supported only on Android Oreo(API 26) and above.
 
 ## Usage
-```javascript
-import RNNavbarStyle from 'react-native-navbar-style';
 
-// TODO: What to do with the module?
-RNNavbarStyle;
+Importing
+
+```javascript
+import NavbarStyle from 'react-native-navbar-style';
 ```
-  
+
+Changing color - setNavBarColor(color)
+
+```javascript
+NavbarStyle.setNavbarColor('#16a085');
+```
+
+Changing Theme - setLightNavbar(isLight)
+
+```javascript
+//Makes the navigation bar icons dark.
+//This is suitable for light navbar colors.
+await NavbarStyle.setLightNavbar(true);
+
+//Normal Navbar(Light Icons)
+await NavbarStyle.setLightNavbar(false);
+```  
