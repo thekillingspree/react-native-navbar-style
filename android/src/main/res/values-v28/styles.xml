@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="LightNavbar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <style name="NormalNavbar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+
+</resources>
