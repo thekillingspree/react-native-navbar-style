@@ -62,7 +62,7 @@ await NavbarStyle.setLightNavbar(false);
 
 ## Examples
 
-# Colored Navbar with Light Icons
+### Colored Navbar with Light Icons
 
 ![Purple Navbar with Light Icon](https://bit.ly/2Yuf9wK)
 
@@ -71,7 +71,7 @@ NavbarStyle.setNavbarColor('#8e44ad');
 await NavbarStyle.setLightNavbar(false);
 ```  
 
-# Light Navbar with dark icons
+### Light Navbar with dark icons
 
 ![Light Navbar with dark Icons](https://bit.ly/2Nt9tSr)
 
@@ -81,7 +81,7 @@ await NavbarStyle.setLightNavbar(true);
 ```  
 
 
-# Colored Navbar with dark icons
+### Colored Navbar with dark icons
 
 ![Colored Navbar with dark Icons](https://bit.ly/2XeClgL)
 
