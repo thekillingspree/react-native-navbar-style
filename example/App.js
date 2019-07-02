@@ -1,20 +1,15 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {Platform, StyleSheet, Text, View, Button} from 'react-native';
 import NavbarStyle from 'react-native-navbar-style';
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+
 
 export default class App extends Component {
 
-  setLightbar = () => {
-    NavbarStyle.setLightNavbar(true);
+  setLightbar = async () => {
+    await NavbarStyle.setLightNavbar(true);
   }
-  setDarkbar = () => {
-    NavbarStyle.setLightNavbar(false);
+  setDarkbar = async () => {
+    await NavbarStyle.setLightNavbar(false);
   }
 
   onChangeNavBarColor = () => {
@@ -27,9 +22,9 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>NavbarStyles</Text>
-        <TouchableOpacity onPress={this.setLightbar}><Text>Set Light Navbar</Text></TouchableOpacity>
-        <TouchableOpacity onPress={this.setDarkbar}><Text>Set Dark Navbar</Text></TouchableOpacity>
-        <TouchableOpacity onPress={this.onChangeNavBarColor}><Text>Change Color</Text></TouchableOpacity>
+        <Button title="Set Light Navbar" onPress={this.setLightbar}/>
+        <Button title="Set Dark Navbar" onPress={this.setDarkbar}/>
+        <Button title="Change Color" onPress={this.onChangeNavBarColor}/>
       </View>
     );
   }
@@ -40,6 +35,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'space-evenly',
     backgroundColor: '#F5FCFF',
   },
   welcome: {
