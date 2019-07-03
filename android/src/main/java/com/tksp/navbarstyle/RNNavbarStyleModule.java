@@ -26,7 +26,7 @@ public class RNNavbarStyleModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void setNavbarColor(String color, Promise promise) {
+    public void setNavbarColor(final String color, final Promise promise) {
         try {
             UiThreadUtil.runOnUiThread(new Runnable() {
                 @Override
