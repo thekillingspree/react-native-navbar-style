@@ -27,11 +27,20 @@ public class RNNavbarStyleModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void setNavbarColor(String color, Promise promise) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            getCurrentActivity().getWindow().setNavigationBarColor(Color.parseColor(color));
-            promise.resolve(true);
-        } else {
-            promise.reject(new Exception("Current android version(" + Build.VERSION.SDK_INT + ") does not support changing the navbar color."));
+        try {
+            UiThreadUtil.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        getCurrentActivity().getWindow().setNavigationBarColor(Color.parseColor(color));
+                        promise.resolve(true);
+                    } else {
+                        promise.reject(new Exception("Current android version(" + Build.VERSION.SDK_INT + ") does not support changing the navbar color."));
+                    }
+                }
+            });
+        } catch(Exception e) {
+            promise.reject(e);
         }
     }
 
